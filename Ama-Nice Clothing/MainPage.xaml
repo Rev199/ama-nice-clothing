@@ -1,0 +1,39 @@
+﻿<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Ama_Nice_Clothing.MainPage"
+    Title="Ama-Nice Clothing">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="20">
+
+            <Image Source="logo.png"
+                   HeightRequest="200"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center" />
+
+            <Label Text="AMA-NICE"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="CLOTHING"
+                   FontSize="20"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Fashion Made For You"
+                   FontSize="16"
+                   HorizontalOptions="Center" />
+
+            <Button Text="START SHOPPING"
+                    x:Name="btnShop"
+                    Clicked="btnShop_Click" />
+
+            <Button Text="LOGIN"
+                    x:Name="btnLogin"
+                    Clicked="btnLogin_Click" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

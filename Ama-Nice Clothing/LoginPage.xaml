@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Ama_Nice_Clothing.LoginPage"
+    Title="Login"
+    Shell.NavBarIsVisible="False"
+    BackgroundColor="#F5F1EA">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="14"
+                             MaximumWidthRequest="450"
+                             VerticalOptions="Center">
+
+            <Image Source="logo.png"
+                   HeightRequest="200"               
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Ama-Nice Clothing"
+                   FontSize="30"
+                   FontAttributes="Bold"
+                   TextColor="#111827"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Welcome back! Please login to your account"
+                   FontSize="14"
+                   TextColor="#4B5563"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
+            <Label Text="Username"
+                   FontAttributes="Bold"
+                   TextColor="#111827"
+                   Margin="0,16,0,0" />
+
+            <Border BackgroundColor="#F3F4F6"
+                    Stroke="#D1D5DB"
+                    StrokeThickness="1"
+                    Padding="12,0"
+                    HeightRequest="56">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12" />
+                </Border.StrokeShape>
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
+                    <Label Text="👤" FontSize="22" VerticalOptions="Center" />
+                    <Entry Grid.Column="1"
+                           x:Name="txtUsername"
+                           Placeholder="Enter your username"
+                           PlaceholderColor="#9CA3AF"
+                           TextColor="#111827"
+                           BackgroundColor="Transparent" />
+                </Grid>
+            </Border>
+
+            <Label Text="Password"
+                   FontAttributes="Bold"
+                   TextColor="#111827"
+                   Margin="0,8,0,0" />
+
+            <Border BackgroundColor="#F3F4F6"
+                    Stroke="#D1D5DB"
+                    StrokeThickness="1"
+                    Padding="12,0"
+                    HeightRequest="56">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12" />
+                </Border.StrokeShape>
+                <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="10">
+                    <Label Text="🔒" FontSize="22" VerticalOptions="Center" />
+                    <Entry Grid.Column="1"
+                           x:Name="txtPassword"
+                           Placeholder="Enter your password"
+                           PlaceholderColor="#9CA3AF"
+                           TextColor="#111827"
+                           IsPassword="True"
+                           BackgroundColor="Transparent" />
+                    <Label Grid.Column="2"
+                           Text="👁"
+                           FontSize="22"
+                           VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTogglePassword" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+            </Border>
+
+            <Label Text="Forgot Password?"
+                   TextColor="#0E7C8F"
+                   FontAttributes="Bold"
+                   HorizontalOptions="End">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnForgotPassword" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Button Text="Login"
+                    BackgroundColor="#0E7C8F"
+                    TextColor="White"
+                    FontSize="22"
+                    FontAttributes="Bold"
+                    CornerRadius="12"
+                    HeightRequest="60"
+                    Margin="0,10,0,0"
+                    Clicked="btnLogin_Click" />
+
+            <Label Text="Don't have an account?"
+                   TextColor="#111827"
+                   HorizontalOptions="Center"
+                   Margin="0,10,0,0" />
+
+            <Label Text="Sign Up"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="#0E7C8F"
+                   HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnSignUp" />
+                </Label.GestureRecognizers>
+            </Label>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
